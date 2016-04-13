@@ -1,3 +1,3 @@
 # Manifest Item Test
 
-Coming soon
+Coming soon!
