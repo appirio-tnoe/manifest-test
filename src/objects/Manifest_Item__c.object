@@ -70,7 +70,7 @@
     <fields>
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
-        <label>Description</label>
+        <label>Description1</label>
         <length>32768</length>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
