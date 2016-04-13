@@ -78,7 +78,7 @@
     </fields>
     <label>Manifest Item</label>
     <nameField>
-        <label>Manifest Item Name</label>
+        <label>Manifest Item Text</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Manifest Items</pluralLabel>
