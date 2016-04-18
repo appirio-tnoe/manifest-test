@@ -52,72 +52,32 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Action__c</fullName>
+        <fullName>Component__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
-        <label>Action</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Add</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Update</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Delete</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Assignee__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Assignee</label>
-        <referenceTo>User</referenceTo>
-        <relationshipName>Manifest_Items</relationshipName>
-        <required>false</required>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Issue__c</fullName>
+        <fullName>Release__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Issue</label>
-        <referenceTo>Issue__c</referenceTo>
-        <relationshipLabel>Manifest Items</relationshipLabel>
-        <relationshipName>Manifest_Items</relationshipName>
+        <label>Detected In Release</label>
+        <referenceTo>Release__c</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Name__c</fullName>
-        <externalId>false</externalId>
-        <label>Manifest Item Name</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Notes__c</fullName>
-        <externalId>false</externalId>
-        <label>Notes</label>
-        <length>131072</length>
-        <trackTrending>false</trackTrending>
-        <type>Html</type>
-        <visibleLines>25</visibleLines>
     </fields>
     <fields>
         <fullName>Story__c</fullName>
@@ -125,34 +85,20 @@
         <externalId>false</externalId>
         <label>Story</label>
         <referenceTo>Story__c</referenceTo>
-        <relationshipLabel>Manifest Items</relationshipLabel>
-        <relationshipName>Manifest_Items</relationshipName>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <fields>
-        <fullName>Type__c</fullName>
-        <externalId>false</externalId>
-        <label>Type</label>
-        <length>80</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <label>Manifest Item</label>
-    <listViews>
-        <fullName>All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
+    <label>Issue</label>
     <nameField>
-        <displayFormat>MI-{000000}</displayFormat>
-        <label>Manifest Item Number</label>
+        <displayFormat>I-{000000}</displayFormat>
+        <label>Issue Number</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Manifest Items</pluralLabel>
+    <pluralLabel>Issues</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
 </CustomObject>
